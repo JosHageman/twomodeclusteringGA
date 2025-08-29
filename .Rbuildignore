@@ -8,7 +8,7 @@
 ^vignettes/.+\.Rmd$
 ^\.github$
 ^_pkgdown\.yml$
-
+^\.git$
 ^twomodeclusteringGA\.Rproj$
 ^\.Rproj\.user$
 ^R/\.lintr\.R$

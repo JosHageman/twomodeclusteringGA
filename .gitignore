@@ -1,6 +1,16 @@
 .Rhistory
+R/.lintr.R
 .RmyMatrix
 .Rproj.user
 .DS_Store
 inst/doc
 .vscode
+.git
+.Rhistory
+.RData
+.Ruserdata
+twomodeclusteringGA-manual.pdf
+twomodeclusteringGA.Rproj
+inst/doc/
+data-raw/
+
