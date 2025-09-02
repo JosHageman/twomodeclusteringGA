@@ -211,7 +211,7 @@ plotTwomodeClustering <- function(myMatrix,
   
   if (palette == "diverging") {
     p <- p + ggplot2::scale_fill_gradient2(low = "#008000", mid = "#000000", high = "#ff0000",
-                                           midpoint = 0, name = "Value")
+                                           name = "Value")
   } else if (palette == "viridis") {
     p <- p + ggplot2::scale_fill_viridis_c(option = "C", name = "Value")
   } else if (palette == "grey") {

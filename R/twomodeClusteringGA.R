@@ -10,11 +10,11 @@
 #' @param nRowClusters Integer. Number of row clusters to form.
 #' @param seeds Integer vector. Random seeds for multiple GA runs. Default is 1:5.
 #' @param verbose Logical. If TRUE, prints progress information. Default is FALSE.
-#' @param maxiter Integer. Maximum number of GA iterations. Default is 1000.
+#' @param maxiter Integer. Maximum number of GA iterations. Default is 2000.
 #' @param popSize Integer. Population size for the GA. Default is 300.
 #' @param pmutation Numeric. Probability of mutation (0-1). Default is 0.05.
-#' @param pcrossover Numeric. Probability of crossover (0-1). Default is 0.7.
-#' @param elitism Integer. Number of best individuals to preserve. If NULL, uses 5% of popSize.
+#' @param pcrossover Numeric. Probability of crossover (0-1). Default is 0.5.
+#' @param elitism Integer. Number of best individuals to preserve. Default is 100. If NULL, uses 5% of popSize.
 #' @param interval Integer. Interval for progress monitoring when verbose=TRUE. Default is 100.
 #' @param parallel Logical. Whether to use parallel processing. Default is FALSE.
 #' @param run Integer. Number of consecutive generations without improvement before stopping.
@@ -87,10 +87,10 @@ twomodeClusteringGA <- function(myMatrix,
                                 seeds = 1:5,
                                 verbose = FALSE,
                                 maxiter = 2000,
-                                popSize = 100,
+                                popSize = 300,
                                 pmutation = 0.05,
-                                pcrossover = 0.8,
-                                elitism = 10,
+                                pcrossover = 0.5,
+                                elitism = 100,
                                 interval = 100,
                                 parallel = FALSE,
                                 run = NULL,
