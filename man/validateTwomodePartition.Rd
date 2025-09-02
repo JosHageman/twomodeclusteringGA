@@ -69,6 +69,7 @@ result <- twomodeClusteringGA(
   seeds = 1,
   maxiter = 200,
   popSize = 30,
+  elitism = 1,
   validate = FALSE,
   verbose = TRUE
 )

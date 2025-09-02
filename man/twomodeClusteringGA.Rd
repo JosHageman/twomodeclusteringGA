@@ -11,10 +11,10 @@ twomodeClusteringGA(
   seeds = 1:5,
   verbose = FALSE,
   maxiter = 2000,
-  popSize = 100,
+  popSize = 300,
   pmutation = 0.05,
-  pcrossover = 0.8,
-  elitism = 10,
+  pcrossover = 0.5,
+  elitism = 100,
   interval = 100,
   parallel = FALSE,
   run = NULL,
@@ -38,15 +38,15 @@ twomodeClusteringGA(
 
 \item{verbose}{Logical. If TRUE, prints progress information. Default is FALSE.}
 
-\item{maxiter}{Integer. Maximum number of GA iterations. Default is 1000.}
+\item{maxiter}{Integer. Maximum number of GA iterations. Default is 2000.}
 
 \item{popSize}{Integer. Population size for the GA. Default is 300.}
 
 \item{pmutation}{Numeric. Probability of mutation (0-1). Default is 0.05.}
 
-\item{pcrossover}{Numeric. Probability of crossover (0-1). Default is 0.7.}
+\item{pcrossover}{Numeric. Probability of crossover (0-1). Default is 0.5.}
 
-\item{elitism}{Integer. Number of best individuals to preserve. If NULL, uses 5\% of popSize.}
+\item{elitism}{Integer. Number of best individuals to preserve. Default is 100. If NULL, uses 5\% of popSize.}
 
 \item{interval}{Integer. Interval for progress monitoring when verbose=TRUE. Default is 100.}
 
@@ -106,6 +106,7 @@ result <- twomodeClusteringGA(
   seeds = 1,
   maxiter = 200,
   popSize = 30,
+  elitism = 1,
   validate = TRUE,
   verbose = TRUE
 )
