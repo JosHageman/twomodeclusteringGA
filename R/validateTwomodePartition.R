@@ -173,14 +173,7 @@ validateTwomodePartition <- function(myMatrix,
   # Optional: Monte Carlo using random partitions (no GA)
   if (is.numeric(monteCarlo) && monteCarlo > 0) {
     if (!is.null(seed)) {
-      oldSeed <- .Random.seed
       set.seed(seed)
-      on.exit({
-        # Restore RNG state if it existed
-        if (exists("oldSeed", inherits = FALSE)) {
-          .Random.seed <<- oldSeed
-        }
-      }, add = TRUE)
     }
     
     fNull <- numeric(monteCarlo)
