@@ -124,9 +124,7 @@ twomodeClusteringGA <- function(myMatrix,
 
   for (i in seq_along(seeds)) {
     if (isTRUE(verbose)) cat(sprintf("Run %d (seed=%s):\n", i, as.character(seeds[i])))
-
-    set.seed(seeds[i])
-
+    
     gaArgs <- list(
       type       = "real-valued",
       fitness    = fitnessFun,
